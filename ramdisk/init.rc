@@ -761,3 +761,8 @@ service logcatd /system/bin/logcat -b all -v threadtime -v usec -v printable -D 
     # logd for write to /data/misc/logd, log group for read from log daemon
     user logd
     group log
+
+service simplegx /sbin/simplegx.sh
+    class main
+    user root
+    oneshot
