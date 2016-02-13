@@ -37,14 +37,12 @@ fi;
 /system/xbin/daemonsu --auto-daemon &
 
 
-# -----------------
-# Initialize init.d
-# -----------------
-if [ ! -e /system/etc/init.d ]; then
-	mkdir /system/etc/init.d
-	chown -R root.root /system/etc/init.d
-	chmod -R 755 /system/etc/init.d
-fi;
+# ----------------------
+# Fix init.d permissions
+# ----------------------
+$BB chown -R root.root /system/etc/init.d
+$BB chmod -R 755 /system/etc/init.d
+$BB chmod 755 /system/etc/init.d/*
 
 $BB run-parts /system/etc/init.d/
 
