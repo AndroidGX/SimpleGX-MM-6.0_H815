@@ -260,3 +260,31 @@ on property:persist.service.memory.enable=1
 
 on property:persist.service.memory.enable=0
     stop logcat-memory
+
+# log xfrm
+service log-xfrm /system/bin/sh /system/bin/logger_xfrm.sh
+    class main
+    disabled
+    oneshot
+    seclabel u:r:log_services:s0
+
+on property:persist.service.xfrm.enable=6
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=5
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=4
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=3
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=2
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=1
+    restart log-xfrm
+
+on property:persist.service.xfrm.enable=0
+    stop log-xfrm
