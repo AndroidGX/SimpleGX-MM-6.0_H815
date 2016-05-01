@@ -217,7 +217,6 @@ persist.camera.snapshot.number   u:object_r:camera_snapshot_prop:s0
 persist.camera.tcc_aat           u:object_r:qualcomm_camera_prop:s0
 persist.configurationver         u:object_r:fota_prop:s0
 persist.data.lgetest.0    u:object_r:persist_data_lgetest_prop:s0
-persist.data.iwlan.enable        u:object_r:persist_iwlan_prop:s0
 persist.data.ois.         u:object_r:persist_data_ois_prop:s0
 persist.data.sbp.update         u:object_r:update_prop:s0
 persist.data.sensor              u:object_r:sensor_name_prop:s0
